@@ -4,8 +4,16 @@ const name = document.querySelector('#name');
 const need = document.querySelector('#need');
 const htmlMessage = document.querySelector('#message');
 const form = document.getElementById('contact-form');
+const email = document.getElementById('email-company');
 
-
+email.addEventListener('click', () => {
+    const email = "andreafreitas2312@gmail.com"
+    const mailto_link = 'mailto:' + email
+    window = window.open(mailto_link, 'emailWindow')
+    if (window && window.open && !window.closed) {
+        window.close()
+    }
+})
 
 function submitForm(event) {
     //Preventing page refresh
